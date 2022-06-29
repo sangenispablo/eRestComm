@@ -10,3 +10,6 @@
 
 ### Como cambiar la variable global ADMIN ?:
 - En el archivo ``` .env ``` cambiar a true o false segun se necesite
+
+### Como cambiar probar con POSTMAN ?:
+- El archivo ``` eRestComm.postman_collection.json ``` exportarlo a Postman y usar esos endpoints

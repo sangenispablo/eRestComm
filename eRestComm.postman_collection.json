@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "53de8397-39c3-4cc1-b838-b754f57b57e7",
+		"name": "eRestComm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7376726"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Crear Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Producto 3\",\r\n\t\"descripcion\": \"Descripcion del Producto 3\",\r\n    \"codigo\":\"CodigoProducto3\",\r\n    \"foto\": \"https://picsum.photos/id/3/200/300\",\r\n    \"precio\": 333,\r\n    \"stock\": 333\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Narana Fanta\",\r\n\t\"descripcion\": \"La mejor gaseosa del mundo\",\r\n    \"codigo\":\"123233\",\r\n    \"foto\": \"https://picsum.photos/id/4/200/300\",\r\n    \"precio\": 220,\r\n    \"stock\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productos/9z_j8HhO7uCUE1sG91ElO",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"9z_j8HhO7uCUE1sG91ElO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/productos/tz_mraOGAIEmpZwFsFLk1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"tz_mraOGAIEmpZwFsFLk1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producto(s)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Pablo A. Sangenis\",\r\n\t\"correo\": \"pablo123@gmail.com\",\r\n\t\"password\": \"123456\",\r\n\t\"rol\": \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/productos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carritos",
+			"item": [
+				{
+					"name": "Crear Carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/carritos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/carritos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Carritos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/carritos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Carrito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/carritos/fEpDmR4wMiJEpXnE77NuE/productos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"fEpDmR4wMiJEpXnE77NuE",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Producto en Carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"gPX8m_NEgbWA5HvIxk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/carritos/fEpDmR4wMiJEpXnE77NuE/productos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"fEpDmR4wMiJEpXnE77NuE",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Producto del Carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/carritos/fEpDmR4wMiJEpXnE77NuE/productos/gPX8m_NEgbWA5HvIxk9RI",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"fEpDmR4wMiJEpXnE77NuE",
+								"productos",
+								"gPX8m_NEgbWA5HvIxk9RI"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
